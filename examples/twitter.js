@@ -6,6 +6,11 @@
  * common-node twitter.js username password keyword
  * </pre>
  */
+ 
+ if (system.args.length < 3 || system.args.length > 5){
+        console.log('Usage: twitter.js username password keyword');
+        return;
+}
 
 var HttpClient = require('httpclient').HttpClient;
 var TextStream = require('io').TextStream;
